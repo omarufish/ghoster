@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["join @.gg/theausvinking"];
+const statusMessages = ["join @.gg/theausvinking","follow @theausvinking"];
 
 
 let currentIndex = 0;
@@ -73,7 +73,7 @@ function updateStatusAndSendMessages() {
   const nextStatus = statusMessages[(currentIndex + 1) % statusMessages.length];
 
   client.user.setPresence({
-    activities: [{ name: currentStatus, type: ActivityType.Playing}],
+    activities: [{ name: currentStatus, type: ActivityType.Custom}],
     status: 'dnd',
   });
 
